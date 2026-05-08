@@ -14,6 +14,7 @@ int main(){
         std::cout << n << " "; 
     }
     std::cout << "\n";
+    
     // 2
     std::cout << "Make a vector \n"; 
     std::vector<int> customVect; 
@@ -34,7 +35,7 @@ int main(){
     std::cout << "Size of vector: " << customVect.size() << "\n";
     // 3
     std::vector<std::string> colors; 
-    char cont = 'y';
+    cont = 'y';
     while(cont != 'y'){
         std::string col;
         std::cout << "Enter a color: \n";
@@ -55,7 +56,7 @@ int main(){
     std::vector<std::string> names; 
     for (int i = 0; i < numOfNames; i++) {
         std::string name;
-        std::cout << "Enter" << i+1 << "name" << "\n";
+        std::cout << "Enter " << i+1 << " name" << "\n";
         std::cin >> name;
         names.push_back(name); 
     }
