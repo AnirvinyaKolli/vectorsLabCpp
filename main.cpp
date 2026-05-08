@@ -1,10 +1,29 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include <limits>
 
 void greet(std::vector<std::string> names);
 
+void tenNums();
+void customVector();
+void faveColor();
+void names();
+
 int main(){
+    tenNums();
+    customVector();
+    faveColor();
+    names();
+}
+
+void greet(std::vector<std::string> names){
+    std::cout <<"Hi,";
+    for(std::string name : names) std::cout << name << " ";
+    std::cout << "!\n";
+}
+
+void tenNums(){
     // 1
     std::vector<int> tenNums = {1,2,3,4,5,6,7,8,9,10};
     std::cout << tenNums.at(2) << "\n";
@@ -14,7 +33,10 @@ int main(){
         std::cout << n << " "; 
     }
     std::cout << "\n";
-    
+    std::cin.clear(); 
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+void customVector(){
     // 2
     std::cout << "Make a vector \n"; 
     std::vector<int> customVect; 
@@ -33,9 +55,13 @@ int main(){
     }
     std::cout << "\n";
     std::cout << "Size of vector: " << customVect.size() << "\n";
+    std::cin.clear(); 
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+}
+void faveColor(){
     // 3
     std::vector<std::string> colors; 
-    cont = 'y';
+    char cont = 'y';
     while(cont != 'y'){
         std::string col;
         std::cout << "Enter a color: \n";
@@ -49,7 +75,10 @@ int main(){
         std::cout << n << " "; 
     }
     std::cout << "\n";
-
+    std::cin.clear(); 
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+}
+void names(){
     int numOfNames; 
     std::cout << "How many names: \n";
     std::cin >> numOfNames;
@@ -61,10 +90,4 @@ int main(){
         names.push_back(name); 
     }
     greet(names);
-}
-
-void greet(std::vector<std::string> names){
-    std::cout <<"Hi,";
-    for(std::string name : names) std::cout << name << " ";
-    std::cout << "!\n";
 }
